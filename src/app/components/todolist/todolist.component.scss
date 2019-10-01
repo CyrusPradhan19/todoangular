@@ -1,0 +1,49 @@
+.todo-input{
+    text-align: center;
+    width:100%;
+    padding:10px,10px;
+    font-size:18px;
+    margin-bottom:16px;
+    &:focus{
+        outline:0;
+    }
+}
+.todo-item{
+    align-content: center;
+    
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation-duration: 0.3s;
+}
+.remove-item{
+    align-items: center;
+    cursor: pointer;
+    margin-left: 14px;
+    &:hover{
+        color:black;
+    }
+}
+.todo-item-label
+{
+    padding:10px;
+    border:1px solid white;
+    margin-left:12px;
+}
+#header
+{
+    font-size: 20px;
+    text-align: center;
+    border:10px solid red;
+    background-color: red;
+}
+.width
+{
+    width:100%;
+}
+.extracontainer
+{
+    align-items: center;
+    justify-content: space-between;
+}
