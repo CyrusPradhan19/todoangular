@@ -5,21 +5,21 @@
 <div class="todo-item" *ngFor="let todo of todosfiltered()"@fade>
     <div class="todo-item-left">
         <mat-checkbox
-        [(ngModel)]="todo.completed">
+        [(ngModel)]="todo.completed"><br>
     </mat-checkbox>
-    
-</div>
+  
 
-<div *ngIf="!todo.editing;else editingtodo"
+
+    <div *ngIf="!todo.editing;else editingtodo"
     class="todo-item-label "[ngClass]="{'completed':
-    todo.completed}"(dblclick)="edittodo(todo)">{{todo.title}}</div>
-        <div class="todo-item-label" (dblclick)="editTodo(todo)">{{todo.title}}</div>
+    todo.completed}"(dblclick)="editTodo(todo)">{{todo.title}}</div>
+        
        <ng-template #editingtodo>
                 <input type="text" class="todo-item-edit" (dblclick)="editTodo(todo)"[(ngModel)]="todo.title"
                 (blur)="doneedit(todo)"(keyup.enter)="doneedit(todo)"(keyup.esc)="canceledit(todo)" autofocus>
         </ng-template>
-
     </div>
+    
     <div class="remove-item" (click)="deleteTodo(todo.id)">
         &times;
     </div>
@@ -40,4 +40,6 @@
     <div *ngIf="atleastonecompleted()">
         <button (click)="clearcompleted()">Clear Completed</button>
     </div>
-    </div>
+ </div>
+<p id="footer">Copyright@2019<br>
+                cyruspradhan019@gmail.com</p>

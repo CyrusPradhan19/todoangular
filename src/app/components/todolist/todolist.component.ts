@@ -30,18 +30,18 @@ export class TodolistComponent implements OnInit {
   ngOnInit() {
     this.filter='all';
     this.beforeeditcache='';
-    this.idForTodo=4;
+    this.idForTodo=3;
     this.todoTitle='';
     this.todos=[
       {
         "id":1,
-        "title":"Finish Angular",
+        "title":"First Angular",
         "completed": false,
         "editing":false,
       },
       {
         "id":2,
-        "title":"Cyrus",
+        "title":"Second Angular",
         "completed": false,
         "editing":false,
       },
@@ -67,7 +67,7 @@ export class TodolistComponent implements OnInit {
     
   }
   deleteTodo(id:number):void{
-    this.todos=this.todos.filter(todo => todo.id != id);
+    this.todos=this.todos.filter(todo => todo.id !== id);
   }
   doneedit(todo:Todo):void{
     if(todo.title.trim().length==0)
@@ -80,8 +80,11 @@ export class TodolistComponent implements OnInit {
     todo.title=this.beforeeditcache;
     todo.editing=false;
   }
+  completed():number{
+    return this.todos.filter(todo => todo.completed).length;
+  }
   remaining():number{
-    return this.todos.filter(todos=> !todos.completed).length;
+    return this.todos.filter(todo=>!todo.completed).length;
   }
   atleastonecompleted():boolean{
     return this.todos.filter(todo=>todo.completed).length>0;

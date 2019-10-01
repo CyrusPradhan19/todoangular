@@ -1,7 +1,7 @@
 .todo-input{
-    text-align: center;
+   
     width:100%;
-    padding:10px,10px;
+    padding:10px,18px;
     font-size:18px;
     margin-bottom:16px;
     &:focus{
@@ -9,8 +9,8 @@
     }
 }
 .todo-item{
-    align-content: center;
-    
+   
+   
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
     animation-duration: 0.3s;
 }
 .remove-item{
-    align-items: center;
+  
     cursor: pointer;
     margin-left: 14px;
     &:hover{
@@ -33,6 +33,7 @@
 }
 #header
 {
+    margin-top:0;
     font-size: 20px;
     text-align: center;
     border:10px solid red;
@@ -42,8 +43,14 @@
 {
     width:100%;
 }
-.extracontainer
+#footer
 {
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:red;
+    
+    margin-bottom:0;
 }
